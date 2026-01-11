@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Checkbox Exporter",
+  "version": "1.0",
+  "description": "Export selected checkboxes to CSV (real & ARIA checkboxes supported)",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Export Checkboxes"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
